@@ -23,7 +23,7 @@
 
 .button--outlined {
   color: var(--color-primary);
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--fonts);
 }
 
 .button--skip {

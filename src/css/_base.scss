@@ -10,6 +10,12 @@
       transition: none !important;
     }
   }
+
+  // Set the same transition duration and timing function for every element
+  // Note that this won't trigger transition by itself - you still have to
+  // set transition-property
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-function);
 }
 
 html,
@@ -23,6 +29,7 @@ body {
   margin: 0;
 }
 body::after {
+  --transition-duration: .4s;
   background-color: #000;
   bottom: 0;
   content: "";
@@ -31,7 +38,7 @@ body::after {
   position: absolute;
   right: 0;
   top: 0;
-  transition: opacity .4s ease-in;
+  transition: opacity var(--transition-duration) var(--transition-function);
   z-index: 1000;
 }
 body.is-toggled::after {

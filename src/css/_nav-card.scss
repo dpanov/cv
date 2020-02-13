@@ -15,13 +15,15 @@
   }
 
   .nav-card__icon {
-    background-color: var(--color-primary);
+    opacity: 1;
   }
 }
 
 .nav-card__icon {
   grid-area: icon;
-  transition: background-color .3s ease-in;
+  opacity: .2;
+  background-color: var(--color-primary);
+  transition-property: opacity;
 }
 
 .nav-card__content {
