@@ -17,3 +17,4 @@ Recreation of falcon.io main menu that is more accessible and has smoother trans
 ## CSS architecture
  - Use of CSS variables for things like primary color and button dimensions means easier styling and future updates
  - Dark mode support
+ - Button text is properly centered vertically
