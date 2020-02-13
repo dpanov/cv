@@ -1,0 +1,45 @@
+.nav-card {
+  color: #000;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas: "icon content";
+  grid-template-columns: max-content 1fr;
+  text-decoration: none;
+  width: 100%;
+  align-items: center;
+}
+.nav-card:hover {
+  .nav-card__title,
+  .nav-card__text {
+    color: var(--color-primary);
+  }
+
+  .nav-card__icon {
+    background-color: var(--color-primary);
+  }
+}
+
+.nav-card__icon {
+  grid-area: icon;
+  transition: background-color .3s ease-in;
+}
+
+.nav-card__content {
+  grid-area: content;
+}
+
+.nav-card__title {
+  font-weight: 600;
+  line-height: 22px;
+  font-size: 14px;
+  display: block;
+  transition: color .3s ease-in;
+}
+
+.nav-card__text {
+  font-weight: 300;
+  line-height: 20px;
+  font-size: 13px;
+  margin: 0;
+  transition: color .3s ease-in;
+}

@@ -1,0 +1,31 @@
+.header {
+  background-color: #fff;
+  position: relative;
+  z-index: 2000;
+}
+
+.header__container {
+  align-items: center;
+  display: grid;
+  grid-template-columns: min-content 1fr max-content;
+  height: 70px;
+  justify-items: center;
+  margin: 0 auto;
+  max-width: var(--container-width);
+}
+
+.header__container::after {
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 250;
+}
+
+.header__action-button {
+  position: relative;
+  z-index: 500;
+}

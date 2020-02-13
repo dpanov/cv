@@ -1,0 +1,16 @@
+.logo {
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 500;
+}
+.logo:focus {
+  &::after {
+    border: 2px dotted #000;
+  }
+}
+
+.logo img {
+  max-width: unset;
+}

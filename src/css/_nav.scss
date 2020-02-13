@@ -1,0 +1,75 @@
+.nav {
+
+}
+
+.nav__login,
+.nav__button {
+  text-decoration: none;
+  background: none;
+  color: #000;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  margin: 0 10px;
+  position: relative;
+  z-index: 500;
+  padding: 10px;
+}
+
+.nav__button.is-toggled {
+  &::before {
+    background-color: var(--color-primary);
+    bottom: 0;
+    content: "";
+    height: 3px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+// Nav container
+.nav__container {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  margin: 0 auto;
+  max-width: var(--container-width);
+  opacity: 0;
+  padding: 50px 0;
+  transition: opacity .2s ease-in .1s;
+}
+
+.nav__button.nav__button.is-toggled + .nav__links-wrapper > .nav__container {
+  opacity: 1;
+}
+
+
+// Nav links wrapper
+.nav__links-wrapper {
+  background: #fff;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 70px;
+  transform: translateY(calc(-100% - 70px)); // Transitioning transform is better performance-wise
+  transition: transform .2s, visibility .2s;
+  visibility: hidden;
+  z-index: 100;
+}
+
+.nav__button.is-toggled + .nav__links-wrapper {
+  transform: translateY(0);
+  visibility: visible;
+}
+
+
+// Login link
+.nav__login {
+  z-index: 500;
+  display: inline-flex;
+
+  img {
+    margin-left: 5px;
+  }
+}
