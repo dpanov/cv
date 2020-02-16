@@ -1,0 +1,20 @@
+.nav {
+  font-size: 0;
+  justify-self: end;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  padding-top: 80px;
+
+  @media (min-width: 710px) {
+    display: block;
+    position: static;
+  }
+
+  @media (min-width: 1024px) {
+    justify-self: center;
+  }
+}

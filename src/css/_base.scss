@@ -10,12 +10,6 @@
       transition: none !important;
     }
   }
-
-  // Set the same transition duration and timing function for every element
-  // Note that this won't trigger transition by itself - you still have to
-  // set transition-property
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--transition-function);
 }
 
 html,

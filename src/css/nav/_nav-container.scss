@@ -1,0 +1,21 @@
+// Nav container
+.nav-container {
+  --grid-item-width: 230px;
+
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(var(--grid-item-width), 1fr));
+  margin: 0 auto;
+  max-width: var(--container-width);
+  padding: 50px var(--container-space);
+  transition: opacity var(--transition-duration) var(--transition-function) .1s;
+  opacity: 0;
+
+  @media (min-width: 1024px) {
+    --grid-item-width: 330px;
+  }
+}
+
+.is-toggled + .nav-dropdown > .nav-container {
+  opacity: 1;
+}

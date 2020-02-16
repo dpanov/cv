@@ -1,0 +1,55 @@
+:root {
+  --hamburger-space: 7px;
+}
+
+.hamburger {
+  background: none;
+  display: grid;
+  font-size: 18px;
+  font-weight: 600;
+  grid-gap: var(--hamburger-space);
+  grid-template-columns: min-content min-content;
+  text-transform: uppercase;
+  z-index: 1000;
+
+  @media (min-width: 710px) {
+    display: none;
+  }
+  
+}
+
+.hamburger__icon {
+  display: block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @media (min-width: 7var(--hamburger-space)) {
+    display: none;
+  }
+}
+
+.hamburger__icon,
+.hamburger__icon::after,
+.hamburger__icon::before {
+  background-color: #000;
+  height: 3px;
+  width: calc(var(--hamburger-space) * 3);
+}
+
+.hamburger__icon::after,
+.hamburger__icon::before {
+  content: "";
+  display: block;
+  position: relative;
+}
+
+.hamburger__icon::before {
+  top: calc(var(--hamburger-space) * -1);
+  // background: red;
+}
+
+.hamburger__icon::after {
+  bottom: calc(100% - var(--hamburger-space));
+  // background: green;
+}

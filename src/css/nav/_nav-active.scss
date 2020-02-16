@@ -1,0 +1,12 @@
+.nav-active {
+  background-color: var(--color-primary);
+  bottom: 15px;
+  height: 3px;
+  left: 0;
+  position: absolute;
+  transition-property: transform, width, opacity;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-function);
+  width: 0;
+  z-index: 600;
+}
