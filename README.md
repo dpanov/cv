@@ -25,3 +25,9 @@ Recreation of falcon.io main menu that is more accessible and has smoother trans
 ## Things to consider
  - dropdown menu slide animation is a bit different - in order to use only hardware-accelerated CSS properties the sliding logic of the dropdown menu is a bit different than the original one.
  - Some colors are different due to WCAG compliance and also due to changing opacity level for some of them, instead of changing the background-color. Of course, both changes must be coordinated with the designer or the product owner in order to be in line with the brand identity.
+
+ - Should we use <h#> for Publish? Should we use a hidden dot in order to have a pause after "Publish"?
+<div class="nav-card__content">
+  <strong class="nav-card__title">Publish</strong>
+  <p class="nav-card__text">Manage all your content in one calendar.</p>
+</div>

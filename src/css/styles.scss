@@ -8,3 +8,11 @@
 @import 'logo';
 @import 'nav';
 @import 'nav-card';
+
+.sr-only {
+  height: 1px;
+  left: -999px;
+  position: absolute;
+  width: 1px;
+  z-index: -999;
+}

@@ -27,12 +27,6 @@
 }
 
 .button--skip {
-  height: 1px;
-  left: -999px;
-  position: absolute;
-  top: auto;
-  width: 1px;
-  z-index: -999;
   color: var(--color-primary);
 }
 .button--skip:focus {

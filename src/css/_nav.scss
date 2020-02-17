@@ -54,7 +54,7 @@
   right: 0;
   top: 70px;
   transform: translateY(calc(-100% - 70px)); // Transitioning transform is better performance-wise
-  transition: transform, 
+  transition: transform,
               visibility 0 ease .2s,
               opacity;
 
@@ -73,6 +73,7 @@
 // Login link
 .nav__login {
   display: inline-flex;
+  align-items: center;
   z-index: 500;
 
   img {
