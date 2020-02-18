@@ -1,0 +1,22 @@
+// Nav links wrapper
+.nav-dropdown {
+  background: #fff;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 70px;
+  transform: translateY(calc(-100% - 70px));
+  transition-property: transform, visibility;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-function);
+
+  visibility: hidden;
+
+  // We need visibility: hidden to make the submenu not accessible if it's hidden
+  z-index: 100;
+}
+
+.is-toggled + .nav-dropdown {
+  transform: translateY(0);
+  visibility: visible;
+}

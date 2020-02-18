@@ -1,0 +1,41 @@
+.nav-button {
+  --space: 10px;
+
+  background: none;
+  color: #495166;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 300;
+  margin: 5px calc(var(--space) * 2);
+  padding: var(--space) 0;
+  position: relative;
+  text-decoration: none;
+  z-index: 500;
+  line-height: 1;
+
+  @media (min-width: 710px) {
+    --space: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+    margin: 0 calc(var(--space) * 2);
+  }
+}
+
+.nav-button--toggler {
+  display: block;
+}
+
+// Login link
+.nav-button--login {
+  display: inline-flex;
+  align-items: center;
+  display: none;
+  margin-left: 45px;
+  z-index: 500;
+
+  img {
+    margin-left: 5px;
+  }
+}

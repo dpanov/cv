@@ -64,7 +64,9 @@ function menu() {
 		});
 
 		// Init active state
-		NavActiveState.style.transform = 'translateX(' + Nav.getBoundingClientRect().left - 100 + 'px)';
+		setTimeout(() => {
+			NavActiveState.style.transform = 'translateX(' + NavTogglers.item(0).getBoundingClientRect().left + 'px)';
+		}, 500)
 	}
 }
 

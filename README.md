@@ -14,13 +14,16 @@ Recreation of falcon.io main menu that is more accessible and has smoother trans
  - Proper :focus styling for all focusable elements
  - WCAG AAA compliant color contrast
  - `Skip to content` link
- - Semantic HTML (e.g. a button should really be a <button>, not a <p>)
+ - Semantic and valid HTML (e.g. a button should really be a <button>, not a <p>, also no <div> children in the <ul> element)
  - Takes into consideration `prefers-reduced-motion`
+ - Buttons are bigger to ensure easier clicking, especially on touch devices
+ - Added some whitespace between nav links in the dropdown - it was getting cluttered on tablet sizes (834px screen width)
 
 ## CSS stuff
  - Use of CSS variables for things like primary color and button dimensions means easier styling and future changes
  - Dark mode support
  - Button text is properly centered vertically
+ - Hamburger icon don't overlap with menu on some screen sizes
 
 ## Things to consider
  - dropdown menu slide animation is a bit different - in order to use only hardware-accelerated CSS properties the sliding logic of the dropdown menu is a bit different than the original one.
@@ -31,3 +34,11 @@ Recreation of falcon.io main menu that is more accessible and has smoother trans
   <strong class="nav-card__title">Publish</strong>
   <p class="nav-card__text">Manage all your content in one calendar.</p>
 </div>
+
+## To do
+Think over the CSS architecture
+Refactor _nav.scss, especially the transitions logic
+Refactor menu.js
+Make screenshots of all the ways the menu is currently broken
+Check if screen readers read pseudo elements content
+Event listener on screen resize

@@ -1,7 +1,10 @@
 .header {
   background-color: #fff;
-  position: relative;
   z-index: 2000;
+
+  @media (min-width: 710px) {
+    position: relative;
+  }
 }
 
 .header__container {
@@ -12,20 +15,37 @@
   justify-items: center;
   margin: 0 auto;
   max-width: var(--container-width);
+  padding: 0 var(--container-space);
 }
 
 .header__container::after {
-  content: "";
   background-color: #fff;
-  position: absolute;
-  top: 0;
-  left: 0;
   bottom: 0;
+  content: "";
+  display: none;
+  left: 0;
+  position: absolute;
   right: 0;
+  top: 0;
   z-index: 250;
+
+  @media (min-width: 710px) {
+    display: block;
+    position: relative;
+  }
 }
 
 .header__action-button {
+  display: none;
   position: relative;
   z-index: 500;
+
+  @media (min-width: 1024px) {
+    display: block;
+  }
+}
+
+.header__hamburger {
+  position: absolute;
+  right: var(--container-space);
 }
