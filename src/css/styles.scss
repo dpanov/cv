@@ -14,3 +14,11 @@
 @import 'nav/nav-dropdown';
 @import 'nav/nav-button';
 @import 'hamburger';
+
+.sr-only {
+  height: 1px;
+  left: -999px;
+  position: absolute;
+  width: 1px;
+  z-index: -999;
+}
