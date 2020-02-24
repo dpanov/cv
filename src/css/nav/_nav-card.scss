@@ -7,6 +7,11 @@
   text-decoration: none;
   width: 100%;
   align-items: center;
+
+  @media (min-width: 710px) {
+
+  }
+
 }
 .nav-card:hover {
   .nav-card__title,
@@ -24,6 +29,11 @@
   opacity: .2;
   background-color: var(--color-primary);
   transition-property: opacity;
+  display: none;
+
+  @media (min-width: 710px) {
+    display: block;
+  }
 }
 
 .nav-card__content {
@@ -44,4 +54,9 @@
   font-size: 13px;
   margin: 0;
   transition: color .3s ease-in;
+  display: none;
+
+  @media (min-width: 710px) {
+    display: block;
+  }
 }

@@ -34,6 +34,11 @@ body::after {
   top: 0;
   transition: opacity var(--transition-duration) var(--transition-function);
   z-index: 1000;
+  display: none;
+
+  @media (min-width: 710px) {
+    display: block;
+  }
 }
 body.is-toggled::after {
   opacity: 0.2;

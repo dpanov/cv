@@ -20,9 +20,9 @@
 
 .header__container::after {
   background-color: #fff;
-  bottom: 0;
+  bottom: calc(100% - 70px);
   content: "";
-  display: none;
+  // display: none;
   left: 0;
   position: absolute;
   right: 0;
@@ -30,6 +30,7 @@
   z-index: 250;
 
   @media (min-width: 710px) {
+    bottom: 0;
     display: block;
   }
 }
