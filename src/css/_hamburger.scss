@@ -4,27 +4,28 @@
 
 .hamburger {
   background: none;
-  display: grid;
+  display: block;
   font-size: 18px;
   font-weight: 600;
-  grid-gap: var(--hamburger-space);
-  grid-template-columns: min-content min-content;
   text-transform: uppercase;
   z-index: 1000;
+  margin: 0;
+  padding: 12px calc(var(--hamburger-space) * 4 + 12px) 12px 12px;
+  position: relative;
 
   @media (min-width: 710px) {
     display: none;
   }
-  
 }
 
 .hamburger__icon {
   display: block;
-  position: relative;
+  position: absolute;
+  right: 12px;
   top: 50%;
   transform: translateY(-50%);
 
-  @media (min-width: 7var(--hamburger-space)) {
+  @media (min-width: 710px) {
     display: none;
   }
 }

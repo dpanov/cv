@@ -48,3 +48,6 @@ Using ul's and li's in a navigation is a good idea, because they provide a count
 - Make screenshots of all the ways the menu is currently broken
 - Check if screen readers read pseudo elements content
 - Event listener on screen resize
+
+## Things I Learned:
+- `<button>` with `display: grid` not working as expected in Safari

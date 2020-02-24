@@ -46,6 +46,5 @@
 }
 
 .header__hamburger {
-  position: absolute;
-  right: var(--container-space);
+  justify-self: flex-end;
 }
