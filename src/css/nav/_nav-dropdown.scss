@@ -4,19 +4,25 @@
   left: 0;
   position: absolute;
   right: 0;
-  top: 70px;
-  transform: translateY(calc(-100% - 70px));
+  top: 0;
+  transform: translateX(calc(-100% - 70px));
   transition-property: transform, visibility;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-function);
+  visibility: hidden; // We need visibility: hidden to make the submenu not accessible by keyboard if it's hidden
+  z-index: 1000;
 
-  visibility: hidden;
-
-  // We need visibility: hidden to make the submenu not accessible if it's hidden
-  z-index: 100;
+  @media (min-width: 710px) {
+    transform: translateY(calc(-100% - 70px));
+    z-index: 100;
+  }
 }
 
 .is-toggled + .nav-dropdown {
-  transform: translateY(0);
+  transform: translateX(0);
   visibility: visible;
+
+  @media (min-width: 710px) {
+    transform: translateY(0);
+  }
 }

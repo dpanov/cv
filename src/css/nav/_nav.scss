@@ -9,10 +9,13 @@
   right: 0;
   bottom: 0;
   background-color: #fff;
-  padding-top: 80px;
+  z-index: 400;
+  padding-top: 70px;
   transform: translateY(-110%);
   opacity: 0;
-  transition: transform var(--transition-duration) var(--transition-function), opacity var(--transition-duration) var(--transition-function);
+  transition-property: transform, opacity;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-function);
   transition-delay: var(--transition-duration);
 
   @media (min-width: 710px) {
@@ -38,7 +41,7 @@
 }
 
 .nav > ul {
-  // --transition-duration: 0.5s;
+  --transition-duration: 0.5s;
   padding: 0;
   transform: translateX(-20px);
   opacity: 0;

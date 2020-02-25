@@ -1,7 +1,6 @@
 .nav-card {
   color: #000;
   display: grid;
-  grid-gap: 10px;
   grid-template-areas: "icon content";
   grid-template-columns: max-content 1fr;
   text-decoration: none;
@@ -9,9 +8,8 @@
   align-items: center;
 
   @media (min-width: 710px) {
-
+    grid-gap: 10px;
   }
-
 }
 .nav-card:hover {
   .nav-card__title,
@@ -41,11 +39,17 @@
 }
 
 .nav-card__title {
-  font-weight: 600;
-  line-height: 22px;
-  font-size: 14px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1;
   display: block;
   transition: color .3s ease-in;
+
+  @media (min-width: 710px) {
+    font-weight: 600;
+    line-height: 1.57;
+    font-size: 14px;
+  }
 }
 
 .nav-card__text {
