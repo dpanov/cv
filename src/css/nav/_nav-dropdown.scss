@@ -1,28 +1,48 @@
-// Nav links wrapper
+// Structure
 .nav-dropdown {
-  background: #fff;
+  bottom: 0;
   left: 0;
+  padding-top: 10px;
+  pointer-events: none;
   position: absolute;
   right: 0;
-  top: 0;
-  transform: translateX(calc(-100% - 70px));
-  transition-property: transform, visibility;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--transition-function);
-  visibility: hidden; // We need visibility: hidden to make the submenu not accessible by keyboard if it's hidden
+  top: -10px;
   z-index: 1000;
 
   @media (min-width: 710px) {
-    transform: translateY(calc(-100% - 70px));
+    background: #fff;
+    bottom: unset;
+    top: unset;
     z-index: 100;
   }
 }
 
-.is-toggled + .nav-dropdown {
+.is-dropdown-toggled + .nav-dropdown {
+  pointer-events: unset;
+}
+
+// Transition
+.nav-dropdown {
+  // Transitioned properties
+  opacity: 0;
+  visibility: hidden; // needed to make it not accessible by keyboard if hidden
+  @media (min-width: 710px) {
+    transform: translateY(calc(-100% - 70px));
+  }
+
+  // Transition settings
+  transition-property: opacity, transform, visibility;
+  transition-timing-function: ease-out;
+  transition-duration: var(--transition-duration);
+}
+.is-dropdown-toggled + .nav-dropdown {
+  // Transitioned properties
+  opacity: 1;
   transform: translateX(0);
   visibility: visible;
-
+  
   @media (min-width: 710px) {
     transform: translateY(0);
+    transition-timing-function: ease-in;
   }
 }

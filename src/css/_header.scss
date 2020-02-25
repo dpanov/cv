@@ -18,23 +18,6 @@
   padding: 0 var(--container-space);
 }
 
-.header__container::after {
-  background-color: #fff;
-  bottom: calc(100% - 70px);
-  content: "";
-  // display: none;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 250;
-
-  @media (min-width: 710px) {
-    bottom: 0;
-    display: block;
-  }
-}
-
 .header__action-button {
   display: none;
   position: relative;

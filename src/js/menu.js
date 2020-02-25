@@ -1,11 +1,11 @@
 function menu() {
-	const toggledClass = 'is-toggled';
+	const toggledClass = 'is-dropdown-toggled';
 
 	const Nav = document.querySelector('.js-nav');
 	const Header = document.querySelector('.js-header');
 	const Body = document.querySelector('body');
 
-	const NavTogglers = Nav.querySelectorAll('.js-nav-toggler');
+	const NavTogglers = document.querySelectorAll('.js-nav-toggler');
 	const NavActiveState = document.querySelector('.js-nav-active-state');
 
 	initMenu();

@@ -1,5 +1,5 @@
 .nav {
-  --transition-duration: 0.3s;
+  --transition-duration: .3s;
 
   font-size: 0;
   justify-self: end;
@@ -10,12 +10,12 @@
   bottom: 0;
   background-color: #fff;
   z-index: 400;
-  padding-top: 70px;
+  padding-top: 80px;
   transform: translateY(-110%);
   opacity: 0;
   transition-property: transform, opacity;
   transition-duration: var(--transition-duration);
-  transition-timing-function: var(--transition-function);
+  transition-timing-function: ease-out;
   transition-delay: var(--transition-duration);
 
   @media (min-width: 710px) {
@@ -30,32 +30,54 @@
   }
 }
 
-.nav.is-toggled {
+.nav.is-nav-toggled {
   transform: translateY(0);
   opacity: 1;
   transition-delay: 0s;
+  transition-timing-function: ease-in;
 
   @media (min-width: 710px) {
     transform: none;
   }
 }
 
+// Serves as a backplate for the header__container so that nav-dropdown doesn't
+// overlap with other elements in the header
+.nav::after {
+  background-color: #fff;
+  bottom: calc(100% - 70px);
+  content: "";
+  // display: none;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 250;
+
+  @media (min-width: 710px) {
+    bottom: 0;
+    display: block;
+  }
+}
+
 .nav > ul {
-  --transition-duration: 0.5s;
+  --transition-duration: 0.3s;
   padding: 0;
   transform: translateX(-20px);
   opacity: 0;
-  transition: transform var(--transition-duration) var(--transition-function), opacity var(--transition-duration) var(--transition-function);
-  transition-delay: 0s;
+  transition-property: transform, opacity;
+  transition-timing-function: ease-out;
+  transition-duration: var(--transition-duration);
   list-style: none;
 
   @media (min-width: 710px) {
     display: flex;
     opacity: 1;
     transform: none;
+    transition: none;
   }
 }
-.nav.is-toggled > ul {
+.nav.is-nav-toggled > ul {
   transform: translateX(0);
   opacity: 1;
   transition-delay: var(--transition-duration);

@@ -1,11 +1,13 @@
 .nav-card {
+  --transition-duration: .3s;
+
+  align-items: center;
   color: #000;
   display: grid;
   grid-template-areas: "icon content";
   grid-template-columns: max-content 1fr;
   text-decoration: none;
   width: 100%;
-  align-items: center;
 
   @media (min-width: 710px) {
     grid-gap: 10px;
@@ -22,12 +24,23 @@
   }
 }
 
+.is-dropdown-toggled + .nav-dropdown {
+  opacity: 1;
+  pointer-events: unset;
+  transform: translateX(0);
+  visibility: visible;
+
+  @media (min-width: 710px) {
+    transform: translateY(0);
+  }
+}
+
 .nav-card__icon {
+  background-color: var(--color-primary);
+  display: none;
   grid-area: icon;
   opacity: .2;
-  background-color: var(--color-primary);
   transition-property: opacity;
-  display: none;
 
   @media (min-width: 710px) {
     display: block;
@@ -39,26 +52,31 @@
 }
 
 .nav-card__title {
+  --space: 10px;
+  display: block;
+
   font-size: 24px;
   font-weight: 300;
   line-height: 1;
-  display: block;
+  margin: 0 0 5px;
+  padding: var(--space) 0;
   transition: color .3s ease-in;
 
   @media (min-width: 710px) {
+    font-size: 14px;
     font-weight: 600;
     line-height: 1.57;
-    font-size: 14px;
+    padding: 0;
   }
 }
 
 .nav-card__text {
+  display: none;
+  font-size: 13px;
   font-weight: 300;
   line-height: 20px;
-  font-size: 13px;
   margin: 0;
   transition: color .3s ease-in;
-  display: none;
 
   @media (min-width: 710px) {
     display: block;

@@ -1,21 +1,41 @@
-// Nav container
+// Structure
 .nav-container {
   --grid-item-width: 230px;
+  // background-color: red;
 
+  // opacity: 0;
   display: grid;
-  grid-gap: 40px;
   grid-template-columns: repeat(auto-fill, minmax(var(--grid-item-width), 1fr));
   margin: 0 auto;
   max-width: var(--container-width);
-  padding: 50px var(--container-space);
-  transition: opacity var(--transition-duration) var(--transition-function) .1s;
-  opacity: 0;
-
+  padding: 0 var(--container-space);
+  
   @media (min-width: 1024px) {
     --grid-item-width: 330px;
+
+    grid-gap: 40px;
+    padding: 50px var(--container-space);
   }
 }
 
-.is-toggled + .nav-dropdown > .nav-container {
+// Transition
+.nav-container {
+  --transition-delay: .3s;
+
+  // Transitioned properties
+  opacity: 0;
+
+  // Transition settings
+  transition-delay: var(--transition-delay);
+  transition-duration: var(--transition-duration);
+  transition-property: opacity;
+  transition-timing-function: ease-out;
+}
+
+.is-dropdown-toggled + .nav-dropdown > .nav-container {
+  // Transitioned properties
   opacity: 1;
+
+  // Transition settings
+  transition-timing-function: ease-in;
 }

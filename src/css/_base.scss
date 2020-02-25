@@ -32,7 +32,7 @@ body::after {
   position: absolute;
   right: 0;
   top: 0;
-  transition: opacity var(--transition-duration) var(--transition-function);
+  transition: opacity var(--transition-duration) ease-in-out;
   z-index: 1000;
   display: none;
 
@@ -40,7 +40,7 @@ body::after {
     display: block;
   }
 }
-body.is-toggled::after {
+body.is-dropdown-toggled::after {
   opacity: 0.2;
 }
 

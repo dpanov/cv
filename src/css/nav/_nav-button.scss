@@ -4,20 +4,20 @@
   background: none;
   color: #495166;
   cursor: pointer;
-  display: inline-block;
+  display: block;
   font-size: 24px;
   font-weight: 300;
-  margin: 5px calc(var(--space) * 2);
-  padding: var(--space) 0;
+  margin: 5px 0;
+  padding: var(--space) calc(var(--space) * 2);
+  text-align: left;
   position: relative;
   text-decoration: none;
   z-index: 500;
   line-height: 1;
   outline: none;
+  width: 100%;
 
   @media (min-width: 710px) {
-    --space: 10px;
-
     font-size: 14px;
     font-weight: 400;
     color: #000;
@@ -25,8 +25,24 @@
   }
 }
 
-.nav-button--toggler {
-  display: block;
+// Transition
+.nav-button {
+  // Transitioned properties
+  opacity: 1;
+
+  // Transition settings
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: var(--transition-duration);
+}
+body.is-dropdown-toggled .nav-button {
+  // Transitioned properties
+  opacity: 0;
+  transition-timing-function: ease-in-out;
+  
+  @media (min-width: 710px) {
+    opacity: 1;
+  }
 }
 
 // Login link
