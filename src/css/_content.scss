@@ -6,7 +6,9 @@
                        "certificate"
                        "languages"
                        "education";
-  grid-template-columns: 1fr;
+  // grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  align-items: start;
   position: relative;
   row-gap: 48px;
   z-index: 100;
@@ -17,6 +19,7 @@
                          "main skills"
                          "main certificate"
                          "main languages"
+                         "main blank"
                          "education blank";
     grid-template-columns: minmax(400px, 1fr) minmax(100px, 368px);
     row-gap: 32px;  
@@ -28,6 +31,7 @@
                          "main skills"
                          "main certificate"
                          "main languages"
+                         "main blank"
                          "education blank";
     grid-template-columns: minmax(400px, 1fr) minmax(100px, 300px);
   }
