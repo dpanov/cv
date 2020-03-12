@@ -1,8 +1,10 @@
 .header {
+  column-gap: 20px;
   display: grid;
   grid-template-areas: "main sidebar";
-  column-gap: 20px;
   grid-template-columns: minmax(200px, 1fr) minmax(80px, 200px);
+  position: relative;
+  z-index: 100;
 
   @media print {
     grid-template-columns: minmax(200px, 1fr) minmax(80px, 128px);
@@ -10,11 +12,11 @@
 }
 
 .header__name {
-  font-weight: 900;
-  text-transform: uppercase;
-  line-height: 1;
   font-size: 24px;
+  font-weight: 900;
+  line-height: 1;
   margin-bottom: 4px;
+  text-transform: uppercase;
     
   @media (min-width: 740px) {
     font-size: 56px;
@@ -25,8 +27,8 @@
 .header__role {
   color: var(--color-main);
   font-size: 14px;
-  line-height: 16px;
   font-weight: 700;
+  line-height: 16px;
 
   @media (min-width: 740px) {
     font-size: 24px;
@@ -38,13 +40,12 @@
 }
 
 .header__photo {
+  border-radius: 4px;
   grid-area: sidebar;
   justify-self: right;
   max-width: 100%;
-  border-radius: 4px;
 
   @media (min-width: 769px) {
     border-radius: 12px;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, .3);
   }
 }
