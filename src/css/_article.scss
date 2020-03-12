@@ -1,0 +1,35 @@
+.article {
+  position: relative;
+}
+
+.article__title {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+}
+
+.article__subtitle {
+  color: var(--color-main);
+  font-size: 20px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.article__location {
+  color: #17476A;
+  font-size: 16px;
+  display: block;
+}
+
+.article__dates {
+  font-size: 16px;
+  color: #737373;
+}
+
+.article__text {
+  display: grid;
+  row-gap: 16px;
+
+  p {
+    margin: 0;
+  }
+}

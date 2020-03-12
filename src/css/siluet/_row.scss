@@ -1,0 +1,26 @@
+.row {
+  display: grid;
+  grid-column-gap: 48px;
+  grid-row-gap: 24px;
+}
+
+.row-1 {
+  grid-template-columns: 1fr;
+}
+
+.row-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: 500px) {
+  .row-tablet-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+@media (min-width: 1025px) {
+  .row-desktop-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}

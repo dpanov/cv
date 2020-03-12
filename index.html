@@ -7,82 +7,295 @@
   <meta name="description" content="" />
 
   <link rel="stylesheet" href="./src/css/styles.scss">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <main>
-    
-    <header>
-      <h1>Dimitar Panov</h1>
-      <p class="" role="doc-subtitle">Front-end / Performance / Accessibility</p>
+  <header class="header">
+    <div class="header__text">
+      <h1 class="header__name name">Dimitar Panov</h1>
+      <p class="header__role role" role="doc-subtitle">Front-end / Accessibility / Performance</p>
       
-      <dl>
+      <dl class="header__contacts contacts">
         <dt>phone</dt>
         <dd>+359 897 41 36 50</dd>
-        
-        <dt>LinkedIn:</dt>
-        <dd><a href="https://www.linkedin.com/in/dimitarpanov">www.linkedin.com/in/dimitarpanov</a></dd>
-        
+
+        <!-- <dt>LinkedIn:</dt>
+        <dd><a href="https://www.linkedin.com/in/dimitarpanov">www.linkedin.com/in/dimitarpanov</a></dd> -->
+
         <dt>email: </dt>
         <dd><a href="mailto:mail@dpanov.net">mail@dpanov.net</a></dd>
-        
+
         <dt>location:</dt>
         <dd>Sofia</dd>
       </dl>
-      
-      <img src="./src/images/dimitar-panov.jpg" alt="" width="512" height="512">
+    </div>
+
+    <img class="header__photo photo" src="./src/images/dimitar-panov.jpg" alt="" width="512" height="512">
   </header>
 
-  <section>
-    <h2>Experience</h2>
-    <ul>
-      <li>
-        <article>
-          <h3>Senior Front End Developer</h3>
-          <strong>DevUnit / DConsult</strong>
+  <main class="content">
+    <section class="content__summary">
+      <h2>Summary</h2>
 
-          <p>DevUnit is a boutique software development company, where I worked on a variety of big and small projects both as a front end and as a back end developer.</p>
+      <p>
+        I have experience with front-end and back-end development, web performance, accessibility and design. I also have appreciation of good design and typography and I'm currently attending a <a href="https://www.telerikacademy.com/upskill/ux-ui">UX/UI upskill course</a> at Telerik Academy.
+      </p>
+    </section><!-- Summary -->
 
-          <p>Notable projects:</p>
-          <ul>
-            <li>Keeps</li>
-            <li>Yard</li>
-            <li>RD.nl</li>
-          </ul>
-        </article>
-      </li>
-
-      <li>
-        <article>
-          <h3>Senior Front End Developer/Team Lead</h3>
-          <strong>Telerik (now Progress)</strong>
-
-          <p>Progress develops powerful .NET and JS components for developers. I lead a team of front end devs that worked together with the marketing and design departments to develop and maintain the company's websites. I also worked on the Sitefinity CMS project.</p>
-
-          <p>Notable projects:</p>
-          <ul>
-            <li>telerik.com</li>
-            <li>Sitefinity CMS</li>
-          </ul>
-        </article>
-      </li>
-
-      <li>
-        <article>
-          <h3>Front End Developer</h3>
-          <strong>Viscomp</strong>
-
-          <p>Viscomp is a Bulgarian subsidiary of Euroweb - a German company that specializes mainly in websites for SMEs.</p>
-          <p>I've worked as a front end dev on hundreds of small-sized websites for SMEs, collaborating daily with designers based in Germany.</p>
-          <p>I was also tasked with introducing responsive web design </p>
-
-        </article>
-      </li>
-
+    <section class="content__main">
+      <h2>Experience</h2>
       
-    </ul>
-  </section>
-</main>
+      <ul class="articles-list">
+        <li>
+          <article class="article">
+            <h3 class="article__title">
+              DevUnit / DConsult
+              
+              <span class="article__dates">
+                <time datetime="2017-05">05/2017</time>
+                -
+                <time datetime="2019-10">10/2019</time>
+              </span>
+            </h3>
+            <strong class="article__subtitle">Senior Front End Developer</strong>
 
+            <div class="article__description">
+              <p><a href="https://devunit.bg/">DevUnit</a> is a boutique software development agency, where I worked on a variety of big and small projects both as a front end and as a back end developer.</p>
+            </div>
+          </article>
+        </li>
+
+        <li>
+          <article class="article">
+            <h3 class="article__title">
+              Infograf
+
+              <span class="article__dates">
+                <time datetime="2013-08">08/2013</time>
+                -
+                Ongoing
+              </span>
+            </h3>
+            <strong class="article__subtitle">Co-Founder, Designer, Developer</strong>
+
+            <div class="article__description">
+              <p>One of my weekend projects. <a href="https://www.infograf.bg">Infograf</a> is an online media that focuses on data and data visualization. I've worked on the website design and development. Unfortunately, nowadays I don't have the time to give it the love it deserves. </p>
+            </div>
+          </article>
+        </li>
+
+        <li>
+          <article class="article">
+            <h3 class="article__title">
+              Varianto:25
+              
+              <span class="article__dates">
+                <time datetime="2013-08">08/2013</time>
+                -
+                Ongoing
+              </span>
+            </h3>
+            <strong class="article__subtitle">Co-Founder, Product Designer</strong>
+
+            <div class="article__description">
+              <p>Another one of my weekend projects. <a href="https://varianto25.com">Varianto:25</a> sells cool merchandise for developers.</p>
+            </div>
+          </article>
+        </li>
+
+        <li>
+          <article class="article">
+            <h3 class="article__title">
+              Telerik (now Progress)
+              
+              <span class="article__dates">
+                <time datetime="2011-02">02/2011</time>
+                -
+                <time datetime="2015-02">02/2015</time>
+              </span>
+            </h3>
+            <strong class="article__subtitle">Senior Front End Developer/Team Lead</strong>
+
+            <div class="article__description">
+              <p><a href="https://www.progress.com/telerik">Telerik</a> develops powerful .NET and JS components for developers. I lead a team of front end devs that worked together with the marketing and design departments to develop and maintain the company's websites.
+              </p>
+
+              <p>I also worked in the Sitefinity CMS team for a while, mainly on the <a href="https://github.com/Sitefinity/feather">Feather project</a>. Here's a <a href="https://github.com/Sitefinity/feather/pulls?q=is%3Apr+is%3Aclosed+author%3Adpanov">pull request list</a> with my contributions.</p>
+            </div>
+          </article>
+        </li>
+
+        <li>
+          <article class="article">
+            <h3 class="article__title">Viscomp
+              
+              <span class="article__dates">
+                <time datetime="2008-02">02/2008</time>
+                -
+                <time datetime="2010-02">02/2010</time>
+              </span>
+            </h3>
+            <strong class="article__subtitle">Front End Developer/Web Designer</strong>
+
+            <div class="article__description">
+              <p><a href="https://www.viscomp.bg/">Viscomp</a> is a Bulgarian subsidiary of Euroweb - a German company that specializes mainly in websites for SMEs.</p>
+              <p>I've worked as a front end dev on hundreds of small-sized websites for SMEs, collaborating daily with designers based in Germany.</p>
+              <p>I have very fond memories with making things work properly on IE6, especially transparent PNGs. </p>
+            </div>
+
+          </article>
+        </li>
+      </ul>
+    </section><!-- Experience -->
+
+    <section class="content__education">
+      <h2>Education</h2>
+      <ul class="articles-list">
+        <li>
+          <article class="article">
+            <h3 class="article__title">Computer Science (dropped out)
+
+              <span class="article__dates">
+                <time datetime="2007-01">01/2007</time>
+                -
+                <time datetime="2008-12">12/2008</time>
+              </span>
+            </h3>
+            <strong class="article__location">Plovdiv university 'Paisii Hilendarski'</strong>
+          </article>
+        </li>
+
+        <li>
+          <article class="article">
+            <h3 class="article__title">Sociology (dropped out)
+              
+              <span class="article__dates">
+                <time datetime="2004-10">10/2004</time>
+                -
+                <time datetime="2006-12">12/2006</time>
+              </span>
+            </h3>
+            <strong class="article__location">Plovdiv university 'Paisii Hilendarski'</strong>
+          </article>
+        </li>
+
+        <li>
+          <article class="article">
+            <h3 class="article__title">High School Education, Machine technician
+              
+              <span class="article__dates">
+                <time datetime="2004-10">10/2004</time>
+                -
+                <time datetime="2006-12">12/2006</time>
+              </span>
+            </h3>
+            <strong class="article__location">Secondary School for Vocational Training in Mechanics and Electronics - Pazardzhik</strong>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <section class="content__languages">
+      <h2>Languages</h2>
+
+      <ul class="languages">
+        <li>
+          <article class="languages__item">
+            <div class="languages__text">
+              <h3>Bulgarian</h3>
+              <span>Native</span>
+            </div>
+
+            <div class="rating" aria-label="5 out of 5 rating">
+              <span class="rating__dot"></span>
+              <span class="rating__dot"></span>
+              <span class="rating__dot"></span>
+              <span class="rating__dot"></span>
+              <span class="rating__dot"></span>
+            </div>
+          </article>
+        </li>
+
+        <li>
+          <article class="languages__item">
+            <div class="languages__text">
+              <h3>English</h3>
+              <span>Proficient</span>
+            </div>
+
+            <div class="rating" aria-label="4 out of 5 rating">
+              <span class="rating__dot"></span>
+              <span class="rating__dot"></span>
+              <span class="rating__dot"></span>
+              <span class="rating__dot"></span>
+              <span class="rating__dot rating__dot--empty"></span>
+            </div>
+          </article>
+        </li>
+
+        <li>
+          <article class="languages__item">
+            <div class="languages__text">
+              <h3>German</h3>
+              <span>Beginner</span>
+            </div>
+
+            <div class="rating" aria-label="4 out of 5 rating">
+              <span class="rating__dot"></span>
+              <span class="rating__dot rating__dot--empty"></span>
+              <span class="rating__dot rating__dot--empty"></span>
+              <span class="rating__dot rating__dot--empty"></span>
+              <span class="rating__dot rating__dot--empty"></span>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </section><!-- Languages -->
+
+    <section class="content__skills">
+      <h2>Skills</h2>
+      <p>Here are the skills and technologies that I feel comfortable working with:</p>
+
+      <ul class="skills">
+        <li class="skills__item">CSS</li>
+        <li class="skills__item">HTML</li>
+        <li class="skills__item">JavaScript</li>
+        <li class="skills__item">Web Accessibility</li>
+        <li class="skills__item">Web Performance</li>
+        <li class="skills__item">Responsive Web Design</li>
+        <li class="skills__item">Design systems/style guides</li>
+      </ul>
+
+      <p>And some other tools and technologies that I've worked with over the last 10 years (in no particular order):</p>
+
+      <ul class="skills">
+        <li class="skills__item">Photoshop</li>
+        <li class="skills__item">Figma</li>
+        <li class="skills__item">PHP</li>
+        <li class="skills__item">CodeIgniter</li>
+        <li class="skills__item">Ruby</li>
+        <li class="skills__item">Ruby on Rails</li>
+        <li class="skills__item">React</li>
+        <li class="skills__item">React Native</li>
+        <li class="skills__item">GulpJS</li>
+        <li class="skills__item">GruntJS</li>
+        <li class="skills__item">Parcel</li>
+        <li class="skills__item">Wordpress</li>
+        <li class="skills__item">Astrum Pattern Library</li>
+      </ul>
+    </section>
+
+    <section class="content__certificate">
+      <h2>Certificate</h2>
+      <p>I've always been very keen on writing accessible code and recently I successfully finished the new W3C <a href="https://www.edx.org/course/web-accessibility-introduction">WAI0.1x: Introduction to Web Accessibility</a> course on edX.</p>
+
+      <a href="https://courses.edx.org/certificates/9b5b46ee26d042868fbfeb45e4de1f75">
+        <img src="./src/images/a11y-certificate.png" alt="Certificate for successfully completing the">
+      </a>
+    </section>
+
+  </main>
 </body>
 </html>

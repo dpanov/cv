@@ -1,0 +1,23 @@
+.articles-list {
+  display: grid;
+  row-gap: 48px;
+
+  li {
+    position: relative;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(100% + 23px);
+      width: 100%;
+      border-bottom: 1px dotted var(--color-main);
+    }
+      
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+

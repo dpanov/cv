@@ -1,0 +1,35 @@
+.content {
+  display: grid;
+  grid-template-areas: "main summary"
+                       "main skills"
+                       "main certificate"
+                       "education languages"
+                       "education something";
+  column-gap: 64px;
+  row-gap: 32px;
+  grid-template-columns: 1fr 368px;
+}
+
+.content__main {
+  grid-area: main;
+}
+
+.content__summary {
+  grid-area: summary;
+}
+
+.content__skills {
+  grid-area: skills;
+}
+
+.content__certificate {
+  grid-area: certificate;
+}
+
+.content__languages {
+  grid-area: languages;
+}
+
+.content__education {
+  grid-area: education;
+}

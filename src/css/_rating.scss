@@ -1,0 +1,18 @@
+.rating {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 20px);
+  column-gap: 5px;
+  justify-content: flex-end;
+}
+
+.rating__dot {
+  background-color: #17476A;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.rating__dot--empty {
+  background-color: #ccc;
+}

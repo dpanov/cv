@@ -1,0 +1,9 @@
+.languages {
+  display: grid;
+  row-gap: 20px;
+}
+
+.languages__item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

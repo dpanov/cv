@@ -1,25 +1,52 @@
+@import 'siluet/constants';
+@import 'siluet/normalize';
+@import 'siluet/sr';
+
 @import 'constants';
-
-@import 'base';
-@import 'button';
-@import 'icon';
-
+@import 'body';
+@import 'content';
 @import 'header';
-@import 'logo';
+@import 'role';
+@import 'contacts';
+@import 'photo';
+@import 'separator';
+@import 'articles-list';
+@import 'article';
+@import 'skills';
+@import 'languages';
+@import 'rating';
 
-@import 'nav/nav';
-@import 'nav/nav-card';
-@import 'nav/nav-active';
-@import 'nav/nav-container';
-@import 'nav/nav-dropdown';
-@import 'nav/nav-button';
-@import 'nav/nav-back-button';
-@import 'hamburger';
+a {
+  color: var(--color-links);
+  font-weight: 700;
+}
 
-.sr-only {
-  height: 1px;
-  left: -999px;
-  position: absolute;
-  width: 1px;
-  z-index: -999;
+h1 {
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  line-height: 1;
+  font-size: 56px;
+}
+
+h2 {
+  text-transform: uppercase;
+  line-height: 48px;
+  border-bottom: 8px solid #000;
+}
+
+h3 {
+  margin-bottom: 0;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin-top: 0;
 }

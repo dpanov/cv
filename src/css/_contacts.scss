@@ -1,0 +1,10 @@
+.contacts {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  column-gap: 10px;
+  row-gap: 5px;
+}
+
+.contacts dd {
+  margin-left: 0;
+}

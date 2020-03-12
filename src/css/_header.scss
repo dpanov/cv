@@ -1,33 +1,16 @@
 .header {
-  background-color: #fff;
-  z-index: 2000;
-
-  @media (min-width: 710px) {
-    position: relative;
-  }
-}
-
-.header__container {
-  align-items: center;
   display: grid;
-  grid-template-columns: min-content 1fr max-content;
-  height: 70px;
-  justify-items: center;
-  margin: 0 auto;
-  max-width: var(--container-width);
-  padding: 0 var(--container-space);
+  grid-template-areas: "main sidebar";
+  grid-gap: 40px;
+  grid-template-columns: minmax(min-content, 1fr) minmax(96px, max-content);
 }
 
-.header__action-button {
-  display: none;
-  position: relative;
-  z-index: 500;
-
-  @media (min-width: 1024px) {
-    display: block;
-  }
+.header__text {
+  grid-area: main;
 }
 
-.header__hamburger {
-  justify-self: flex-end;
+.header__photo {
+  grid-area: sidebar;
+  justify-self: right;
+  max-width: 200px;
 }
