@@ -17,9 +17,13 @@
 
 .article__subtitle {
   color: var(--color-main);
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 16px;
   display: block;
+
+  @media (min-width: 769px) {
+    font-size: 20px;
+  }
 }
 
 .article__location {
@@ -29,8 +33,12 @@
 }
 
 .article__dates {
-  font-size: 16px;
+  font-size: 14px;
   color: #737373;
+
+  @media (min-width: 769px) {
+    font-size: 16px;
+  }
 }
 
 .article__text {
