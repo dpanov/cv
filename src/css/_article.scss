@@ -1,13 +1,13 @@
 .article {
-  position: relative;
   display: grid;
+  position: relative;
   row-gap: 5px;
 }
 
 .article__title {
   display: grid;
-  grid-template-columns: 1fr;
   font-size: 16px;
+  grid-template-columns: 1fr;
 
   @media (min-width: 769px) {
     font-size: 20px;
@@ -17,9 +17,9 @@
 
 .article__subtitle {
   color: var(--color-main);
+  display: block;
   font-size: 18px;
   margin-bottom: 16px;
-  display: block;
 
   @media (min-width: 769px) {
     font-size: 20px;
@@ -28,13 +28,13 @@
 
 .article__location {
   color: #17476A;
-  font-size: 16px;
   display: block;
+  font-size: 16px;
 }
 
 .article__dates {
-  font-size: 14px;
   color: #737373;
+  font-size: 14px;
 
   @media (min-width: 769px) {
     font-size: 16px;
@@ -48,4 +48,22 @@
   p {
     margin: 0;
   }
+}
+
+.article__technologies {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 769px) {
+    column-gap: 10px;
+    grid-template-columns: max-content 1fr;
+  }
+}
+.article__technologies dt,
+.article__technologies dd {
+  margin: 0;
+  padding: 0;
+}
+.article__technologies dd {
+  font-weight: 700;
 }

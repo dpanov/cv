@@ -1,7 +1,7 @@
 {
   "name": "dimitar-panov-cv",
   "version": "1.0.0",
-  "description": "",
+  "description": "Personal CV; demo: https://dimitar-panov-cv.netlify.app/",
   "scripts": {
     "dev": "parcel ./index.html --public-url / --out-dir ./dist",
     "build": "parcel build ./index.html --public-url / --out-dir ./dist"
