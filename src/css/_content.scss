@@ -1,13 +1,23 @@
 .content {
   display: grid;
-  grid-template-areas: "main summary"
-                       "main skills"
-                       "main certificate"
-                       "education languages"
-                       "education something";
-  column-gap: 64px;
-  row-gap: 32px;
-  grid-template-columns: 1fr 368px;
+  grid-template-areas: "summary"
+                       "main"
+                       "skills"
+                       "certificate"
+                       "languages"
+                       "education";
+  row-gap: 48px;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 835px) {
+    row-gap: 32px;
+    column-gap: 64px;
+    grid-template-columns: minmax(400px, 1fr) minmax(100px, 368px);
+    grid-template-areas: "main summary"
+                         "main skills"
+                         "main certificate"
+                         "education languages";  
+  }
 }
 
 .content__main {

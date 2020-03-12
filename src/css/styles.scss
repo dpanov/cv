@@ -6,9 +6,7 @@
 @import 'body';
 @import 'content';
 @import 'header';
-@import 'role';
 @import 'contacts';
-@import 'photo';
 @import 'separator';
 @import 'articles-list';
 @import 'article';
@@ -21,18 +19,17 @@ a {
   font-weight: 700;
 }
 
-h1 {
-  font-weight: 900;
-  text-transform: uppercase;
-  margin-bottom: 0;
-  line-height: 1;
-  font-size: 56px;
-}
-
 h2 {
   text-transform: uppercase;
-  line-height: 48px;
-  border-bottom: 8px solid #000;
+  line-height: 32px;
+  border-bottom: 4px solid #000;
+  font-size: 20px;
+
+  @media (min-width: 769px) {
+    font-size: 32px;
+    line-height: 48px;
+    border-bottom: 8px solid #000;
+  }
 }
 
 h3 {

@@ -1,8 +1,12 @@
 body {
+  display: grid;
+  height: auto;
   margin: 0 auto;
   max-width: 1200px;
-  padding: 128px 48px 128px;
-  display: grid;
+  padding: 32px;
   row-gap: 48px;
-  height: auto;
+  
+  @media (min-width: 769px) {
+    padding: 128px 48px 128px;
+  }
 }

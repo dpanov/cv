@@ -1,8 +1,33 @@
 .header {
   display: grid;
   grid-template-areas: "main sidebar";
-  grid-gap: 40px;
-  grid-template-columns: minmax(min-content, 1fr) minmax(96px, max-content);
+  column-gap: 20px;
+  grid-template-columns: minmax(200px, 1fr) minmax(80px, 200px);
+}
+
+.header__name {
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  line-height: 1;
+  font-size: 24px;
+  margin-bottom: 4px;
+    
+  @media (min-width: 740px) {
+    font-size: 56px;
+    margin-bottom: 0;
+  }
+}
+
+.header__role {
+  color: var(--color-main);
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+
+  @media (min-width: 740px) {
+    font-size: 24px;
+  }
 }
 
 .header__text {
@@ -12,5 +37,10 @@
 .header__photo {
   grid-area: sidebar;
   justify-self: right;
-  max-width: 200px;
+  max-width: 100%;
+  border-radius: 4px;
+
+  @media (min-width: 769px) {
+    border-radius: 50%;
+  }
 }

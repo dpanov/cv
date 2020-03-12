@@ -1,8 +1,14 @@
 .contacts {
-  display: grid;
-  grid-template-columns: min-content 1fr;
   column-gap: 10px;
-  row-gap: 5px;
+  display: grid;
+  font-size: 14px;
+  grid-template-columns: min-content 1fr;
+  margin: 0;
+  line-height: 20px;
+      
+  @media (min-width: 769px) {
+    row-gap: 5px;
+  }
 }
 
 .contacts dd {
