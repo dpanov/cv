@@ -5,8 +5,13 @@ body {
   max-width: 1200px;
   padding: 32px;
   row-gap: 48px;
-  
+  color-adjust: exact;
+
   @media (min-width: 769px) {
     padding: 128px 48px 128px;
+  }
+
+  @media print {
+    padding: 0;
   }
 }

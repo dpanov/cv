@@ -3,4 +3,8 @@
 
   --color-main: #8d3a43;
   --color-links: #29816f;
+
+  @media print {
+    --fonts: sans-serif;
+  }
 }

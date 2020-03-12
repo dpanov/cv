@@ -3,6 +3,10 @@
   grid-template-areas: "main sidebar";
   column-gap: 20px;
   grid-template-columns: minmax(200px, 1fr) minmax(80px, 200px);
+
+  @media print {
+    grid-template-columns: minmax(200px, 1fr) minmax(80px, 128px);
+  }
 }
 
 .header__name {

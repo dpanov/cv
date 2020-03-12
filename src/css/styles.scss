@@ -14,27 +14,45 @@
 @import 'languages';
 @import 'rating';
 
+@page {
+  margin: 55px 30px;
+}
+
 a {
   color: var(--color-links);
   font-weight: 700;
+  outline: none;
+  position: relative;
+}
+
+a:focus {
+  &::after {
+    border: 2px dotted var(--color-links);
+    bottom: -8px;
+    content: "";
+    left: -8px;
+    position: absolute;
+    right: -8px;
+    top: -8px;
+  }
 }
 
 h2 {
-  text-transform: uppercase;
-  line-height: 32px;
   border-bottom: 4px solid #000;
   font-size: 20px;
+  line-height: 32px;
+  text-transform: uppercase;
 
   @media (min-width: 769px) {
+    border-bottom: 8px solid #000;
     font-size: 32px;
     line-height: 48px;
-    border-bottom: 8px solid #000;
   }
 }
 
 h3 {
-  margin-bottom: 0;
   font-size: 20px;
+  margin-bottom: 0;
   text-transform: uppercase;
 }
 
