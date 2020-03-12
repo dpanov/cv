@@ -3,12 +3,16 @@ body {
   height: auto;
   margin: 0 auto;
   max-width: 1200px;
-  padding: 32px;
+  padding: 16px;
   row-gap: 48px;
   color-adjust: exact;
 
+  @media (min-width: 321px) {
+    padding: 32px;
+  }
+
   @media (min-width: 769px) {
-    padding: 128px 48px 128px;
+    padding: 96px 48px 96px;
   }
 
   @media print {

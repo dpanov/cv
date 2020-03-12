@@ -1,13 +1,17 @@
 .header {
-  column-gap: 20px;
+  column-gap: 10px;
   display: grid;
   grid-template-areas: "main sidebar";
   grid-template-columns: minmax(200px, 1fr) minmax(80px, 200px);
   position: relative;
   z-index: 100;
+  
+  @media (min-width: 321px) {
+    grid-template-columns: minmax(220px, 1fr) minmax(80px, 200px);
+  }
 
   @media print {
-    grid-template-columns: minmax(200px, 1fr) minmax(80px, 128px);
+    grid-template-columns: minmax(220px, 1fr) minmax(80px, 128px);
   }
 }
 
