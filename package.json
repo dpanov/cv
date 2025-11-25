@@ -1,7 +1,7 @@
 {
   "name": "dimitar-panov-cv",
   "version": "1.0.0",
-  "description": "Personal CV; demo: https://dimitar-panov-cv.netlify.app/",
+  "description": "Dimitar Panov CV",
   "scripts": {
     "dev": "parcel ./index.html --public-url / --out-dir ./dist",
     "build": "parcel build ./index.html --public-url / --out-dir ./dist"
@@ -9,6 +9,7 @@
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-static-files-copy": "^2.3.1",
+    "prettier": "3.6.2",
     "sass": "^1.26.3"
   },
   "author": "Dimitar Panov",
