@@ -1,6 +1,5 @@
 @import 'siluet/constants';
 @import 'siluet/normalize';
-@import 'siluet/sr';
 
 @import 'constants';
 @import 'body';
@@ -30,7 +29,7 @@ a:focus {
   &::after {
     border: 2px dotted var(--color-links);
     bottom: -8px;
-    content: "";
+    content: '';
     left: -8px;
     position: absolute;
     right: -8px;

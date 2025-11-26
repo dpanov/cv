@@ -1,11 +1,12 @@
 .content {
   display: grid;
-  grid-template-areas: "summary"
-                       "main"
-                       "skills"
-                       "certificate"
-                       "languages"
-                       "education";
+  grid-template-areas:
+    'summary'
+    'main'
+    'skills'
+    'certificate'
+    'languages'
+    'education';
   // grid-template-columns: 1fr;
   grid-template-rows: auto;
   align-items: start;
@@ -15,24 +16,26 @@
 
   @media (min-width: 835px) {
     column-gap: 64px;
-    grid-template-areas: "main summary"
-                         "main skills"
-                         "main certificate"
-                         "main languages"
-                         "main blank"
-                         "education blank";
+    grid-template-areas:
+      'main summary'
+      'main skills'
+      'main certificate'
+      'main languages'
+      'main blank'
+      'education blank';
     grid-template-columns: minmax(400px, 1fr) minmax(100px, 368px);
-    row-gap: 64px;  
+    row-gap: 64px;
   }
 
   @media print {
     column-gap: 32px;
-    grid-template-areas: "main summary"
-                         "main skills"
-                         "main certificate"
-                         "main languages"
-                         "main blank"
-                         "education blank";
+    grid-template-areas:
+      'main summary'
+      'main skills'
+      'main certificate'
+      'main languages'
+      'main blank'
+      'education blank';
     grid-template-columns: minmax(400px, 1fr) minmax(100px, 300px);
   }
 }
