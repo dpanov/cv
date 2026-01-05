@@ -1,1 +1,1 @@
-See demo: https://dimitar-panov-cv.netlify.com/
+See demo: https://dpanov.net/
